@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    .row
+      .col-md-12
+        .card
+          .card-header
+            h1.card-title Dashboard
+            p.card-text Welcome, #{user.username}!
+
+          .card-body
+            // Links aligned to the right
+            div.d-flex.justify-content-end.mb-3
+              a.btn.btn-primary(href='/products', role='button', class='ml-2') View Products
+              a.btn.btn-danger.ml-1(href='/auth/logout', role='button') Logout
+
+            // Counter
+            .card
+              .card-body
+                h5.card-title Product Count
+                p.card-text Total Products: #{pCount}
